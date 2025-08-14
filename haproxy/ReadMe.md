@@ -55,7 +55,6 @@ haproxy/
    git clone https://github.com/IHRahimi/linux.git
    cd haproxy
 
-
 2. Start the containers:
     docker compose up -d
 
