@@ -57,7 +57,7 @@ haproxy/
 
 
 2. Start the containers:
-    docker-compose up -d
+    docker compose up -d
 
 ### Access the services:
     
@@ -85,4 +85,4 @@ haproxy/
 ### Clean Up
 To stop and remove all containers:
 
-    docker-compose down
+    docker compose down
