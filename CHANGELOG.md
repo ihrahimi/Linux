@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/ihrahimi/Linux/compare/v1.0.0...v1.0.1) (2025-08-14)
+
+
+### Bug Fixes
+
+* fix readme file structure ([f09dec4](https://github.com/ihrahimi/Linux/commit/f09dec44c9a9120c20be9b7aa601201c8974ad39))
+
 ## 1.0.0 (2025-08-14)
 
 
