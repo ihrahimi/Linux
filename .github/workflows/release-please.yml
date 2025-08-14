@@ -16,3 +16,8 @@ jobs:
         with:
           release-type: "simple" 
           token: ${{ secrets.GH_TOKEN }}
+          - name: Release Please
+          changelog-types: '[{"type":"feat","section":"Features"},{"type":"fix","section":"Fixes"}]'
+          command: "github-release"  # Force release creation
+        env:
+          DEBUG: "release-please"  # Enable verbose logging
