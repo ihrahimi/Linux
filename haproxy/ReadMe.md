@@ -52,7 +52,7 @@ haproxy/
 ## Getting Started
 
 1. Clone this repository:
-   git clone https://github.com/your-username/haproxy.git
+   git clone https://github.com/IHRahimi/linux.git
    cd haproxy
 
 
