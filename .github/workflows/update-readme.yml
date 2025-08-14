@@ -1,0 +1,38 @@
+name: Update README with Changelog
+
+on:
+  push:
+    branches:
+      - main  # or your default branch
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install replace-in-file
+
+      - name: Inject changelog into README
+        run: |
+          CONTENT=$(sed 's/[&/\]/\\&/g' CHANGELOG.md | awk '{print}' ORS='\\n')
+          npx replace-in-file \
+            --from='<!-- changelog:start -->.*<!-- changelog:end -->' \
+            --to="<!-- changelog:start -->\\n$CONTENT\\n<!-- changelog:end -->" \
+            README.md
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "Update README with latest changelog" || echo "No changes to commit"
+          git push
