@@ -1,9 +1,0 @@
-{
-  "changelog-sections": {
-    "feat": "Features",
-    "fix": "Bug Fixes",
-    "docs": "Documentation"
-  },
-  "changelog-path": "CHANGELOG.md",  // Explicit path
-  "bump-minor-pre-major": true       // For pre-v1.0.0 projects
-}
