@@ -1,0 +1,7 @@
+releaseType: "bash" 
+bumpMinorPreMajor: true
+changelogSections:
+  - type: feat
+    section: Features
+  - type: fix
+    section: Bug Fixes
