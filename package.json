@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ihrahimi/Linux#readme",
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
     "semantic-release": "^24.2.7"
   }
 }
