@@ -1,5 +1,5 @@
 # HAProxy Load Balancer with Docker Compose
-
+ 
 This project demonstrates a simple HAProxy load balancing setup with two Nginx backend servers using Docker Compose.
 
 ## Overview
