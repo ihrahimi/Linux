@@ -16,3 +16,6 @@ jobs:
         with:
           release-type: "simple"  
           token: ${{ secrets.GH_TOKEN }}1
+env:
+   ACTIONS_STEP_DEBUG: true
+   DEBUG: "release-please"
