@@ -15,7 +15,7 @@ jobs:
         uses: google-github-actions/release-please-action@v3
         with:
           release-type: "simple"  
-          token: ${{ secrets.GH_TOKEN }}1
+          token: ${{ secrets.GH_TOKEN }}
 env:
    ACTIONS_STEP_DEBUG: true
    DEBUG: "release-please"
