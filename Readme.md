@@ -1,4 +1,4 @@
-# 🐧 Linux Toolkit
+# 🐧 Linux 
 
 A curated collection of reverse proxy setups, `iptables` firewall rules, and Bash scripts designed to streamline and secure your Linux environment. Whether you're managing servers, automating tasks, or hardening your system, this toolkit has you covered.
 
