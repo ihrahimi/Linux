@@ -1,4 +1,4 @@
-releaseType: "node" 
+releaseType: simple 
 bumpMinorPreMajor: true
 changelogSections:
   - type: feat
