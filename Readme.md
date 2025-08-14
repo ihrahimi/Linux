@@ -25,5 +25,5 @@ A curated collection of reverse proxy setups, `iptables` firewall rules, and Bas
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/Linux.git
+git clone https://github.com/IHRahimi/Linux.git
 cd Linux
