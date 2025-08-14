@@ -1,21 +1,21 @@
 name: Release Please
 on:
-  push:
+  pull_request:
     branches:
       - main
+    types: [closed]  # Only trigger when a PR is closed (merged or not)
 
 jobs:
   release-please:
+    # Only run if the PR was merged (not just closed)
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
     steps:
       - name: Release Please
-        uses: google-github-actions/release-please-action@v3.8.0
+        uses: google-github-actions/release-please-action@v3
         with:
-          release-type: "simple"  
+          release-type: "simple"
           token: ${{ secrets.GH_TOKEN }}
-#env:
- #  ACTIONS_STEP_DEBUG: true
-  # DEBUG: "release-please"
