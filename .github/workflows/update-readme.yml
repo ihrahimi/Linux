@@ -21,13 +21,19 @@ jobs:
       - name: Install dependencies
         run: npm install replace-in-file
 
-      - name: Inject changelog into README
-        run: |
-          CONTENT=$(sed 's/[&/\]/\\&/g' CHANGELOG.md | awk '{print}' ORS='\\n')
-          npx replace-in-file \
-            --from='<!-- changelog:start -->.*<!-- changelog:end -->' \
-            --to="<!-- changelog:start -->\\n$CONTENT\\n<!-- changelog:end -->" \
-            README.md
+        - name: Inject changelog into README
+          run: |
+            # Escape special characters and format changelog content
+            CONTENT=$(awk '{print}' CHANGELOG.md | sed 's/$/\\n/' | tr -d '\n' | sed 's/[&/\]/\\&/g')
+        
+            # Replace the placeholder section in README.md
+            npx replace-in-file \
+              --from='<!-- changelog:start -->.*<!-- changelog:end -->' \
+              --to="<!-- changelog:start -->${CONTENT}<!-- changelog:end -->" \
+              README.md
+
+
+  
 
       - name: Commit changes
         run: |
