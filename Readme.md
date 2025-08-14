@@ -22,7 +22,7 @@ A curated collection of reverse proxy setups, `iptables` firewall rules, and Bas
 
 ## 🚀 Getting Started
 
-Clone the repository:
+Clone the repository: 
 
 ```bash
 git clone https://github.com/IHRahimi/Linux.git
