@@ -61,7 +61,6 @@ haproxy/
 ### Access the services:
     
     Load balanced application: http://localhost
-    
     HAProxy stats page: http://localhost:2000 (username: admin, password: admin123)
 
 
