@@ -82,5 +82,4 @@ haproxy/
 
 ### Clean Up
 To stop and remove all containers:
-
     docker compose down
